@@ -43,7 +43,7 @@ const PostJob = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post(`https://carrerhive.onrender.com/api/v1/user/post`, input, {
+      const res = await axios.post(`https://carrerhive.onrender.com/api/v1/job/post`, input, {
         headers: {
           "Content-Type": "application/json",
         },
