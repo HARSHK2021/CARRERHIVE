@@ -46,7 +46,9 @@ const AdminJobsTable = () => {
           <TableRow>
             <TableHead className="font-bold text-black ">Role</TableHead>
             <TableHead className="font-bold text-black">Date</TableHead>
-            <TableHead className="text-right text-black font-bold text-black">Action</TableHead>
+            <TableHead className="text-right font-bold text-black">
+              Action
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
