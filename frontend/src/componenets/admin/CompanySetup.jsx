@@ -1,4 +1,4 @@
-import { COMPANY_API_END_POINT } from "@/utlis/constant";
+
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -48,7 +48,7 @@ const CompanySetup = () => {
         }
         try {
             setLoading(true);
-            const res = await axios.put(`${COMPANY_API_END_POINT}/update/${params.id}`, formData, {
+            const res = await axios.put(`https://carrerhive.onrender.com/api/v1/company/update/${params.id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },

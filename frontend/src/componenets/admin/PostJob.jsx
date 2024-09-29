@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import { JOB_API_END_POINT } from "@/utlis/constant";
+
 import axios from "axios";
 import { useState } from "react";
 import { useSelector } from "react-redux";
@@ -43,7 +43,7 @@ const PostJob = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post(`${JOB_API_END_POINT}/post`, input, {
+      const res = await axios.post(`https://carrerhive.onrender.com/api/v1/user/post`, input, {
         headers: {
           "Content-Type": "application/json",
         },

@@ -7,7 +7,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { setUser } from "@/redux/authSlice";
-import { USER_API_END_POINT } from "@/utlis/constant";
+
 import axios from "axios";
 import { LogOut, User2 } from "lucide-react";
 import React from "react";
@@ -21,7 +21,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const logoutHandler = async () => {
     try {
-      const res = await axios.get(`${USER_API_END_POINT}/logout`, {
+      const res = await axios.get(`https://carrerhive.onrender.com/api/v1/user/logout`, {
         withCredentials: true,
       });
       if (res.data.success) {

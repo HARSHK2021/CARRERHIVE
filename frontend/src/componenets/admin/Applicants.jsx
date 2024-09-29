@@ -1,4 +1,4 @@
-import { APPLICATION_API_END_POINT } from "@/utlis/constant";
+
 import axios from "axios";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -16,7 +16,7 @@ const Applicants = () => {
     useEffect(() => {
         const fetchAllApplicants = async () => {
             try {
-                const res = await axios.get(`${APPLICATION_API_END_POINT}/${params.id}/applicants`, { withCredentials: true });
+                const res = await axios.get(`https://carrerhive.onrender.com/api/v1/application/${params.id}/applicants`, { withCredentials: true });
                 dispatch(setAllApplicants(res.data.job));
             } catch (error) {
                 console.log(error);

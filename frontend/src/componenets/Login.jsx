@@ -9,7 +9,7 @@ import { RadioGroup } from "@radix-ui/react-radio-group";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { USER_API_END_POINT } from "@/utlis/constant";
+
 import { toast } from "sonner";
 import { useDispatch, useSelector } from "react-redux";
 import { setLoading, setUser } from "@/redux/authSlice";
@@ -36,7 +36,7 @@ const Login = () => {
     try {
       dispatch(setLoading(true));
       
-      const res = await axios.post(`${USER_API_END_POINT}/login`, input, {
+      const res = await axios.post(`$https://carrerhive.onrender.com/api/v1/user/login`, input, {
         headers: {
           "Content-Type": "application/json",
         },

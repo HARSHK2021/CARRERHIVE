@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import axios from 'axios'
-import { COMPANY_API_END_POINT } from '@/utlis/constant'
+
 import { toast } from 'sonner'
 import { setSingleCompany } from '@/redux/companySlice'
 
@@ -18,7 +18,7 @@ const CompanyCreate = () => {
     const dispatch = useDispatch();
     const registerNewCompany = async () => {
         try {
-            const res = await axios.post(`${COMPANY_API_END_POINT}/register`, {companyName}, {
+            const res = await axios.post(`https://carrerhive.onrender.com/api/v1/company/register`, {companyName}, {
                 headers:{
                     'Content-Type':'application/json'
                 },

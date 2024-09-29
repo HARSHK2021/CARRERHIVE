@@ -1,6 +1,6 @@
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { APPLICATION_API_END_POINT } from "@/utlis/constant";
+
 import axios from "axios";
 import { MoreHorizontal } from "lucide-react";
 import { useSelector } from "react-redux";
@@ -16,7 +16,7 @@ const ApplicantsTable = () => {
     try {
       axios.defaults.withCredentials = true;
       const res = await axios.post(
-        `${APPLICATION_API_END_POINT}/status/${id}/update`,
+        `https://carrerhive.onrender.com/api/v1/application/status/${id}/update`,
         { status }
       );
   

@@ -2,9 +2,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { setSingleJob } from "@/redux/jobSlice";
-import { APPLICATION_API_END_POINT, JOB_API_END_POINT } from "@/utlis/constant";
-import axios from "axios";
-import { ChevronsRightLeft } from "lucide-react";
+
+import axios from "axios";;
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -26,7 +25,7 @@ const JobDescription = () => {
   const applyJobHandler = async () => {
     try {
       const res = await axios.get(
-        `${APPLICATION_API_END_POINT}/apply/${jobId}`,
+        `https://carrerhive.onrender.com/api/v1/application/apply/${jobId}`,
         { withCredentials: true }
       );
 
@@ -47,7 +46,7 @@ const JobDescription = () => {
   useEffect(() => {
     const fetchSingleJob = async () => {
       try {
-        const res = await axios.get(`${JOB_API_END_POINT}/get/${jobId}`, {
+        const res = await axios.get(`https://carrerhive.onrender.com/api/v1/job/get/${jobId}`, {
           withCredentials: true,
         });
         if (res.data.success) {
