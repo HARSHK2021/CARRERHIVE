@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { Label } from "@radix-ui/react-label";
 import { Input } from "@/components/ui/input";
-import { DotSquare, EyeIcon, Loader2 } from "lucide-react";
+import {  EyeIcon, Loader2 } from "lucide-react";
 import { RadioGroup } from "@radix-ui/react-radio-group";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
@@ -36,7 +36,7 @@ const Login = () => {
     try {
       dispatch(setLoading(true));
       
-      const res = await axios.post(`$https://carrerhive.onrender.com/api/v1/user/login`, input, {
+      const res = await axios.post(`https://carrerhive.onrender.com/api/v1/user/login`, input, {
         headers: {
           "Content-Type": "application/json",
         },
